@@ -12,5 +12,5 @@ const bot = new TelegramBot(TOKEN, {
 bot.setWebHook(`${APP_URL}/bot${TOKEN}`);
 
 bot.on("message", (msg) => {
-  bot.sendMessage(msg.caht.id, msg)
+  bot.sendMessage(msg.chat.id, msg)
 })
