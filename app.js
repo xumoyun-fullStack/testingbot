@@ -1,5 +1,7 @@
 const TelegramBot = require("node-telegram-bot-api");
-const { TOKEN, PORT, APP_URL } = require("./config");
+const TOKEN = process.env.TOKEN;
+const APP_URL = process.env.APP_URL;
+const PORT = process.env.PORT;
 
 const bot = new TelegramBot(TOKEN, {
     webHook:{
