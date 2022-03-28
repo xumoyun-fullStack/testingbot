@@ -12,5 +12,6 @@ const bot = new TelegramBot(TOKEN, {
 bot.setWebHook(`${APP_URL}/bot${TOKEN}`);
 
 bot.on("message", (msg) => {
-  bot.sendMessage(msg.chat.id, msg)
+  if(msg.text == "/start" )bot.sendMessage(msg.chat.id, "Assalomu aleykum");
+  else bot.sendMessage(msg.chat.id, msg.text)
 })
